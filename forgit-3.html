@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Press the space bar!!!</title>
+        <style>
+            body {
+                background-color: black;
+            }
+        </style>
+    </head>
+    <body onkeypress="changeColor(event)">
+        <script>
+            function changeColor(event) {
+                if (event.code === 'Space') {
+                    var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+                    document.body.style.backgroundColor = randomColor;
+                }
+            }
+        </script>
+    </body>
+</html>
